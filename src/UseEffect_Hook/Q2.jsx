@@ -11,12 +11,12 @@ function Quotes(){
     setload(true)
 
     try{
-        let res=await fetch( "https://favqs.com/api/qotd")
+        let res=await fetch("https://quotes-api-self.vercel.app/quote")
 
         let data=await res.json()
-
-        setquote(data.quote.body)
-        console.log(quote)
+        //    console.log(data)
+        setquote(data.quote)
+        // console.log(quote)
         setload(false)
     }
     catch(error){
