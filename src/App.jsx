@@ -1,19 +1,16 @@
 import "./App.css"
 import React from "react"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from "./Exploring_routing_in_react/Q1/nav"
-import PostsData from "./Exploring_routing_in_react/Q1/post"
-import Deatil from "./Exploring_routing_in_react/Q1/deatil"
-import About from "./Exploring_routing_in_react/Q1/about"
+import WeatherDetail from "./Exploring_routing_in_react/Q2/WeartherDetail";
+import WeatherHome from "./Exploring_routing_in_react/Q2/WetherHome";
+
 
 function App(){
   return(
     <Router>
-      <Navbar/>
       <Routes>
-        <Route path="/" element={<PostsData/>}/>
-        <Route path="/post/:id" element={<Deatil/>}/>
-        <Route path="/about" element={<About/>}/>
+        <Route path="/" element={<WeatherHome/>}/>
+        <Route path="/weather/:city" element={<WeatherDetail/>}/>
       </Routes>
     </Router>
   )
